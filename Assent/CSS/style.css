@@ -14,6 +14,7 @@
         padding: 10px;
         text-align: center;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         grid-template-areas: "header"
@@ -24,21 +25,30 @@
     .logo {
         flex: 1;
         text-align: center;
+        margin-top: 10px;
+        margin-bottom: 0px;
     }
 
     .logo img {
-        max-width: 500px;
-        width: 100%;
+        max-width: 80%; 
+        margin-top: 10px;
+        margin-bottom: 0px;
     }
 
     .mobile-header {
-        flex: 1;
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        flex-direction: column;
+        align-items: center; 
         width: 100%;
         margin-top: 10px;
+        margin-bottom: 10px;
     }
+
+    .search-bar {
+        width: 100%; 
+        margin-top: 10px;
+    }
+
 
     .menu-icon {
         cursor: pointer;
@@ -57,6 +67,7 @@
         flex: 1;
         text-align: center;
         margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .search-bar input {
@@ -298,12 +309,15 @@ footer {
 .image-container {
     position: relative;
     overflow: hidden;
+    margin-bottom: 2%
 }
 
 .main-image {
+    max-width: 100%;
     width: 100%;
     height: auto;
     display: block;
+    margin-bottom: 2%
 }
 
 .image-text-container {
@@ -318,20 +332,52 @@ footer {
     max-width: 80%;
     margin: 0 auto;
 }
+
+
+.horizontal-paragraphs {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%; 
+}
+
+.horizontal-paragraphs p {
+    margin-right: 5px;
+    text-align: justify;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-container img {
+    max-width: 100%;
+    width: 100%; 
+    margin-left: 0; 
+    margin-right: 0; 
+}
+
+footer {
+    max-width: 100%;
+    width: 100%; 
+    margin-left: 0; 
+    margin-right: 0; 
+}
+
 footer p {
     font-size: 18px;
     font-family: 'Barlow', sans-serif;
     color: #fff;
 }
 
-i.fa-instagram {
-    font-size: 30px;
-    margin-bottom: 5px;
-}
-
-.instagram-link {
-    color: #fff;
-    text-decoration: none;
+footer i.fa-brands {
+    font-size: 24px; 
+    margin-bottom: 1px;
+    margin-top: 3px;
+    margin-right: 20px;
 }
 }
 
@@ -360,13 +406,15 @@ header {
     font-family: 'Barlow', sans-serif;
     margin-top: 0;
     margin-bottom: 0; 
-    display: grid;
+    display:flex;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "logo nav";
-    align-items: center;
     padding: 10px;
     max-width: 100%;
+    max-height: 100%;
     margin: 0 auto;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
     grid-template-areas: "header"
                          "products"
                          "footer";
@@ -385,14 +433,17 @@ header {
     box-sizing: border-box;
 }
 
+
 .main-grid {
     display: grid;
     grid-template-columns: 25% 75%; 
     grid-template-areas: "sidebar main-section" 
 }
 
+
+
 .sidebar {
-    width: 100%;
+    width: 80%;
     grid-area: sidebar;
     background-color: #eee;
     padding: 20px;
@@ -409,32 +460,53 @@ header {
     margin: 0 auto; 
 }
 
-
-.logo img {
-    max-width: 300px;
-    grid-area: logo;
+.logo {
+    flex: 1;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 5%;
 }
+.logo img {
+    max-width: 200px;
+    max-height: 100%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    }
+
+.right-align {
+    display: flex;
+    justify-content: flex-end;
+}
+
 
 .navMenu {
     grid-template-areas: "nav";
+    max-width: 200px;
+    margin-right: 10px; 
+    justify-content: flex-end; 
 }
 
 
 .navMenu .button {
     position: relative;
     display: contents;
+    margin: 5px;
+    
 }
 
 .navMenu .button button {
     width: 200px;
     height: 60px;
-    background-color: #fff;
-    color: #000;
-    border: none;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #b6b6b6; 
     cursor: pointer;
     font-size: 14px;
     margin: 0;
     padding: 10px;
+    border-radius: 5px;
 }
 
 .navMenu .button .dropdown-content {
@@ -450,43 +522,31 @@ header {
     display: block;
 }
 
-.search-bar-container {
+
+
+#search-bar {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20vh;
-    margin: 0;
-    padding: 0;
-}
-
-.search-bar {
-    width: 80%;
-    margin: 0 auto;
-    padding: 0;
-}
-
+    padding: 5px;
+  }
+  
 .search-bar input {
     width: 100%; 
-    height: 40px;
-    padding: 20px;
+    height: 100%;
+    padding: 5px;
     border: 1px solid #ccc;
-}
-
-.search-bar button {
-    width: 60px;
-    height: 60px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    cursor: pointer;
 }
 
 
 .h3black {
     width: 100%;
-    margin: 1%; 
+    margin: 0%; 
     text-align: center; 
-    margin-top: 0%;
+    margin-top: 0;
+    margin-bottom: 8%;
 }
+
 
 #products {
     display: grid;
@@ -499,8 +559,6 @@ header {
     margin-top: -20px;
     max-width: 100%;
 }
-
-
 
 .box {
     width: 100%;
@@ -518,7 +576,6 @@ header {
     object-fit: cover;
     margin-bottom: 10px;
 }
-
 
 
 .image-container {
@@ -595,6 +652,35 @@ header {
     align-items: center;
 }
 
+.horizontal-paragraphs {
+    display: flex;
+    flex-direction: row;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.horizontal-paragraphs p {
+    margin-right: 20px;
+    text-align: justify;
+    margin-top: 4%;
+    margin-bottom: 10%;
+}
+
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-container img {
+    max-width: 800px;
+    height:700px; 
+    scroll-snap-align: start;
+    margin-right: 10px; 
+    
+}
+
+
 .navMenu {
     grid-template-areas: "nav";
     padding: 20px;
@@ -608,6 +694,7 @@ header {
 
 .image-container {
     position: relative;
+    margin-bottom: 5%
 }
 
 .image-text-container {
@@ -618,17 +705,6 @@ header {
     text-align: center;
 }
 
-.image-text-container article h1 {
-    font-size: 4vw; 
-    margin: 0;
-    color: #D4B9B0;
-    position: relative;
-    letter-spacing: 10px;
-    text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: #000;
-}
 
 footer {
     max-width: 100%; 
@@ -652,14 +728,11 @@ footer p {
     color: #fff;
 }
 
-i.fa-instagram {
-    font-size: 30px;
-    margin-bottom: 5px;
-}
-
-.instagram-link {
-    color: #fff;
-    text-decoration: none;
+footer i.fa-brands {
+    font-size: 30px; 
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-right: 20px;
 }
 }
 
@@ -672,11 +745,75 @@ i.fa-instagram {
 
 
 
-/* TEXTOS*/
+/* ESTILOS GENERALES Y TEXTOS*/
 
-h2, h3, h4, h5, h6 {
+.product-grid .box img {
+    transition: transform 0.3s ease;
+}
+
+.product-grid .box:hover img {
+    transform: scale(1.3);
+}
+
+.footer {
+    transition: transform 0.3s ease;
+}
+
+.footer i:hover{
+    transform: scale(1.8);
+}
+
+
+#blog-section .image-gallery img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+
+@keyframes colorize {
+    to {
+        filter: grayscale(0%);
+    }
+}
+
+
+#blog-section .image-gallery img:hover {
+    animation: colorize 0.3s forwards;
+}
+
+
+#Interiores-Extraordinarios .main-image {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+
+@keyframes colorize {
+    to {
+        filter: grayscale(0%);
+    }
+}
+
+#Interiores-Extraordinarios .main-image:hover {
+    animation: colorize 0.3s forwards;
+}
+
+.image-text-container article h1 {
+    font-size: 4vw; 
+    margin: 0;
+    color: #D4B9B0;
+    position: relative;
+    letter-spacing: 10px;
+    text-shadow: -1px -1px 0 #D4B9B0, 1px -1px 0 #D4B9B0, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #000;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
     background-color: #D4B9B0;
-    color: white;
+    color: #fff;
     padding: 10px;
     margin: 10px 0;
     text-align: center;
@@ -723,5 +860,9 @@ h3 {
 body, header, nav, ul, li, div, main, section, footer {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+* {
     box-sizing: border-box;
 }
